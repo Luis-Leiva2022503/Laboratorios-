@@ -1,0 +1,17 @@
+int leds[3] = {13, 12, 14}; //Se define un arreglo con los pines de salida
+
+void setup() {
+    for (int i = 0; i < 3; i++) { // Este ciclo for recorre el arreglo con los pines de los LEDs
+        pinMode(leds[i], OUTPUT); //se definen los pines de los LEDs como salidas
+    }
+}
+void loop() {
+    for(int i = 0; i < 3; i++){ //Se encienden los LEDs uno por uno por medio de este for
+        digitalWrite(leds[i], HIGH);
+        delay(500);
+    }
+    for(int i = 3; i > -1; i--){ //Se encienden los LEDs uno por uno por medio de este for
+        digitalWrite(leds[i], LOW);
+        delay(500);
+    }
+}

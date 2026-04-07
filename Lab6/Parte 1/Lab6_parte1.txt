@@ -1,0 +1,16 @@
+int PWMpin = 13;
+
+void setup(){
+    pinMode(PWMpin, OUTPUT);
+}
+
+void loop(){
+    for (int i=0; i <= 255; i++){ //inicializacion, condicion, contador
+        analogWrite(PWMpin, i); //Escribimos al Led PWM
+        delay(10);
+    }
+    for (int i=255; i >= 0; i--){
+        analogWrite(PWMpin, i);
+        elay(10);
+    }
+}
